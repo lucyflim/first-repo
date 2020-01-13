@@ -1,0 +1,758 @@
+% Based on Andrew McNabb's Resume. Created: 7 Jan 2004, Last Modified: 17 Jul 2004
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+%%\usepackage[applemac]{inputenc}
+\usepackage{textcomp}
+
+\usepackage{lmodern}
+\usepackage{pslatex}
+
+\usepackage{garamond}
+%%\usepackage{xagaramon}
+
+%%%%%%%%%%%%%%%%%%% upgreek stuff %%%%%%%%%%%%%%%%%%%
+\usepackage{bm}
+\usepackage{upgreek}
+\makeatletter
+\newcommand{\bfgreek}[1]{\bm{\@nameuse{up#1}}}
+\makeatother
+\parindent=0pt
+%%\begin{document}
+%% The default upright $\upmu$. Written with \verb|$\upmu$| in mathmode.
+
+%% \verb|$\bfgreek{mu}$| will allow you to type $\bfgreek{mu}$ to obtain an upright boldface $\mu$.
+\newcommand{\microamp}{\mbox{$\mathrm{\mu}$A}}
+\newcommand{\micamp}{\mbox{$\bfgreek{mu}$A}}
+\newcommand{\micronup}{\mbox{$\bfgreek{mu}$m}}
+%%%%%%%%%%%%%%%%%%% upgreek stuff %%%%%%%%%%%%%%%%%%%
+
+%%\renewcommand{\rmdefault}{padx}
+%%\renewcommand{\rmdefault}{padj}
+%%\renewcommand{\rmdefault}{gar}
+%%\renewcommand{\rmdefault}{ugm}
+
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+\raggedbottom
+
+% Name and contact information
+\newcommand{\name}{Lucy F.~G.~Lim}
+\newcommand{\addr}{Code 691, NASA/Goddard Space Flight Center}
+\newcommand{\phone}{(301) 286-1546}
+\newcommand{\email}{lucy.f.lim@nasa.gov}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+%%	\begin{center}\fontfamily{gar}\selectfont\Huge\scshape#1\end{center}}
+%%	\begin{center}\fontfamily{ugm}\selectfont\Huge\scshape#1\end{center}}
+	\begin{center}\selectfont\Huge\scshape#1\end{center}}
+
+% A ressection is a main section (<H1>Section</H1>)
+%%	{\fontfamily{phv}\selectfont\Large#1}
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\Large#1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+%%	\textbf{#1}---#2 \\
+	\textbf{#1} \hfill #2 \\
+%%	#1 \hfill #2 \\
+	\textrm{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+%%	\begin{itemize}
+}{
+%%	\end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+
+\vspace{8 pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Current Employment}
+ \resitem{Physical Scientist, NASA/Goddard Space Flight Center, 2005--present}
+\end{ressection}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+
+%%  \begin{ressubsec}{Cornell University Department of Astronomy \hfill Ithaca, NY}
+  \begin{ressubsec}{Cornell University}{Ithaca, NY}
+                   {Ph.~D., Astronomy \hfill January 2005
+                   \\ Dissertation
+                   Title: {\it Asteroid Spectroscopy. I.~A Thermal
+                   Infrared Survey of Asteroids.  II.~X-ray
+                   Fluorescence Spectroscopy of 433~Eros.} \\
+                   Advisor:  Professor Steven W.\ Squyres}
+%%     \ressubitem{Graduated January 2005}
+%%   \ressubitem{Advisor:  Professor Steven W. Squyres}
+  \end{ressubsec}
+
+  \begin{ressubsec}{Massachusetts Institute of Technology}{Cambridge, MA}
+                 {Bachelor of Science, Earth, Atmospheric,
+                  and Planetary Sciences \hfill June 1998 \\ Minors
+                  in Physics and Literature}
+  \end{ressubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{NASA Missions and Space Telescope Programs}
+
+  \resitem{Assistant Project Scientist, OSIRIS-REx 
+Asteroid Sample Return Mission
+(New Frontiers 3, PI: D.\ Lauretta), 2010--present.}
+%%(New Frontiers 3, PI: M.~J.\ Drake), 2010--present.}
+
+  \resitem{PI, Spitzer Program 20481:  IRS Spectroscopy of M Asteroids (13.5 hours)}
+
+  \resitem{PI, Spitzer Program 50259: IRS Spectroscopy of Basaltic
+    Asteroids: Vestoids, 1459 Magnya, and Other Non-Vestoid Basaltic
+    Asteroids (19.1 hours)}
+
+  \resitem{Co-I, Spitzer Programs 70163 and 80232: Physical Characterization of 
+Near-Earth objects:  OSIRIS-REx targets
+%%Asteroids: Backup Targets for the OSIRIS-REx Asteroid Sample Return Mission 
+(PI: J.\ Emery)}
+
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{ressection}{Selected Publications and Conference Papers}
+
+%%%%%%%%%%
+%%  X-ray and/or meteoritics stuff (for PICASSO)
+%%%%%%%%%%
+
+\resitem{ ``Modeling orbital gamma-ray spectroscopy experiments at carbonaceous asteroids.''
+  Lim, L. F., R. D. 
+Starr, L. G. Evans, A. M. Parsons, M. E. Zolensky, 
+\& W. V. Boynton,  {\it Meteorit Planet Sci.} {\bf 52}: 174--190, 2017. doi:10.1111/maps.12786
+}
+
+\resitem{ ``Elemental composition of 433 Eros: New calibration of the NEAR-Shoemaker 
+XRS data.'' Lim, L. F. 
+\& L. R. Nittler,  {\it Icarus} {\bf 200}, 129--146, 2009.  
+}
+
+\resitem{ ``X-ray fluorescence measurements of the surface elemental composition of 
+asteroid 433 Eros.'' Nittler, L. R., R. D. Starr, L. Lim, T. J. McCoy, T. 
+H. Burbine, R. C. Reedy, J. I. Trombka, P. Gorenstein, S. W. Squyres, W. V. 
+Boynton, T. P. McClanahan, J. S. Bhangoo, P. E. Clark, M. E. Murphy, 
+\& R. Killen,  {\it Meteoritics \& Planetary Science} {\bf 36 }, 1673--1695, 2001.  
+}
+
+\resitem{``Regolith X-Ray Imaging Spectrometer (REXIS) Aboard the 
+OSIRIS-REx Asteroid Sample Return Mission. '' Masterson, R. A., M. Chodas, 
+L. Bayley, B. Allen, J. Hong, P. Biswas, C. McMenamin, K. Stout, E. 
+Bokhour, H. Bralower, D. Carte, S. Chen, M. Jones, S. Kissel, F. Schmidt, 
+M. Smith, G. Sondecker, L. F. Lim, D. S. Lauretta, J. E. Grindlay, 
+\& R. P. Binzel,  {\it Space Science Reviews} {\bf 214}, 48-- 2018} 
+
+\resitem{``OSIRIS-REx: Sample Return from Asteroid (101955) Bennu. '' 
+Lauretta, D. S., S. S. Balram-Knutson, E. Beshore, W. V. Boynton, C. Drouet 
+d'Aubigny, D. N. DellaGiustina, H. L. Enos, D. R. Golish, C. W. 
+Hergenrother, E. S. Howell, C. A. Bennett, E. T. Morton, M. C. Nolan, B. 
+Rizk, H. L. Roper, A. E. Bartels, B. J. Bos, J. P. Dworkin, D. E. 
+Highsmith, D. A. Lorenz, L. F. Lim, R. Mink, M. C. Moreau, J. A. Nuth, D. 
+C. Reuter, A. A. Simon, E. B. Bierhaus, B. H. Bryan, R. Ballouz, O. S. 
+Barnouin, R. P. Binzel, W. F. Bottke, V. E. Hamilton, K. J. Walsh, S. R. 
+Chesley, P. R. Christensen, B. E. Clark, H. C. Connolly, M. K. Crombie, M. 
+G. Daly, J. P. Emery, T. J. McCoy, J. W. McMahon, D. J. Scheeres, S. 
+Messenger, K. Nakamura-Messenger, K. Righter, 
+\& S. A. Sandford,  {\it Space Science Reviews} {\bf 212}, 925--984,  2017} 
+
+
+\resitem{ ``An Active X-Ray Spectrometer Proposed for the SELENE-2 Rover.'' Kim, K. 
+J., Y. Amano, W. V. Boynton, G. Klingelh{\"o}fer, J. Br{\"u}ckner, N. Hasebe, D. 
+Hamara, R. D. Starr, L. F. Lim, G. Ju, T. J. Fagan, T. Ohta, 
+\& E. Shibamura,  {\it Japan Society of Aeronautical Space Sciences Transactions} {\bf 12}, 35, 2014.  
+}
+
+\resitem{ ``The NEAR-Shoemaker x-ray/gamma-ray spectrometer experiment: Overview and 
+lessons learned.'' Trombka, J. I., L. R. Nittler, R. D. Starr, L. G. 
+Evans, T. J. McCoy, W. V. Boynton, T. H. Burbine, J. Br{\"u}ckner, P. 
+Gorenstein, S. W. Squyres, R. C. Reedy, J. O. Goldsten, L. Lim, K. Hurley, 
+P. E. Clark, S. R. Floyd, T. P. McClanahan, E. McCartney, J. Branscomb, J. 
+S. Bhangoo, I. Mikheeva, 
+\& M. E. Murphy,  {\it Meteoritics \& Planetary Science} {\bf 36 }, 1605--1616, 2001.  
+}
+
+%%%%%%%%%%
+%%  Thermal-IR stuff (for SSW)
+%%%%%%%%%%
+
+\resitem{ ``Mineralogy and thermal properties of V-type Asteroid 956 Elisa: Evidence 
+  for diogenitic material from the Spitzer IRS (5-35
+  \micronup) spectrum.'' Lim, L.
+  %%\&mu;m) spectrum.'' Lim, L. 
+F., J. P. Emery, 
+ \& N. A. Moskovitz,  {\it Icarus} {\bf 213 }, 510--523, 2011.  
+}
+
+\resitem{ ``Spectral Characterization Of Analog Samples In Anticipation Of
+  OSIRIS-REx's Arrival At Bennu.''
+  Donaldson Hanna, K. L. , D. L. Schrader, N. E. Bowles, B. E. Clark,
+  E. A. Cloutis, H. C. Connolly Jr., V. E. Hamilton, L. P. Keller,
+  D. S. Lauretta, L. F. Lim and T. J. McCoy,
+{\it LPSC} {\bf  48}, 2017.  
+}
+
+\resitem{
+``Lessons Learned From Preparing OSIRIS-REx Spectral Analog Samples For Bennu.''
+  Schrader D. L., T. J. McCoy, G. D. Cody, A. J. King, P. F. Schofield,
+  S. S. Russell, H. C. Connolly Jr. , L. P. Keller, K. Donaldson Hanna,
+  N. Bowles, E. A. Cloutis, J. P. Mann, D. M. Applin, D. S. Lauretta,
+  B. E. Clark, V. E. Hamilton, L. Lim, and the OSIRIS-REx team,
+{\it LPSC} {\bf  48}, 2017.  
+  }
+
+%%%%%%%%%%
+%%%%%%%%%%
+
+
+\resitem{ ``Olivine Composition of the Mars Trojan 5261 Eureka: Spitzer IRS Data.'' 
+Lim, L. F., J. P. Emery, M. Mueller, A. S. Rivkin, D. Trilling, 
+\& B. J. Burt,  {\it EPSC-DPS Joint Meeting 2011} {\bf }, 1199, 2011.  
+}
+
+\resitem{ ``Asteroid (101955) 1999 RQ36: Spectroscopy from 0.4 to 2.4
+  %%\&mu;m
+  \micronup \ and 
+meteorite analogs.'' Clark, B. E., R. P. Binzel, E. S. Howell, E. A. 
+Cloutis, M. Ockert-Bell, P. Christensen, M. A. Barucci, F. DeMeo, D. S. 
+Lauretta, H. Connolly, A. Soderberg, C. Hergenrother, L. Lim, J. Emery, 
+\& M. Mueller,  {\it Icarus} {\bf 216}, 462--475, 2011.  
+}
+
+\resitem{ ``The Surface Composition of Ceres.'' Rivkin, A. S., J.-Y. Li, R. E. 
+Milliken, L. F. Lim, A. J. Lovell, B. E. Schmidt, L. A. McFadden, 
+\& B. A. Cohen,  {\it Space Science Reviews} {\bf 163 }, 95--116, 2011.  
+}
+
+
+%% \resitem{ ``Thermal Emission Spectroscopy of M-type Asteroids: How Many are 
+%% Metallic?.'' Emery, J. P. 
+%% \& L. F. Lim,  {\it EPSC-DPS Joint Meeting 2011} {\bf }, 1438, 2011.  
+%% }
+
+
+%% \resitem{ ``Use of the Mars Odyssey High Purity Germanium (HPGe) Gamma Ray Detector 
+%% Design for Orbital Asteroid Measurements.'' Parsons, A. M., W. V. Boynton, 
+%% L. G. Evans, D. Hamara, K. Harshman, L. F. Lim, 
+%% \& R. D. Starr,  {\it Lunar and Planetary Science Conference} {\bf 46 }, 2655--, 2015.  
+%% }
+
+%% \resitem{ ``Measuring Bulk Carbon, Hydrogen, and Sulfur from Orbit: Modeling 
+%% Gamma-Ray Spectroscopy of Carbonaceous Asteroids.'' Lim, L. F., R. D. 
+%% Starr, L. G. Evans, A. M. Parsons, M. E. Zolensky, 
+%% \& W. V. Boynton,  {\it Lunar and Planetary Science Conference} {\bf 46 }, 1681--, 2015.  
+%% }
+
+%% \resitem{ ``Performance Modeling of Orbital Gamma-Ray Spectroscopy of Carbonaceous 
+%% Asteroids: Monte-Carlo Modeling of the HPGe Mars Odyssey GRS.'' Starr, R. 
+%% D., L. F. Lim, L. G. Evans, A. M. Parsons, M. E. Zolensky, 
+%% \& W. V. Boynton,  {\it AGU Fall Meeting Abstracts} {\bf }, 3959, 2014.  
+%% }
+
+
+%% \resitem{ ``Orbital Measurement of Bulk Carbon, Hydrogen, Oxygen, and Sulfur of 
+%% Carbonaceous Asteroids via High Energy Resolution Gamma-Ray Spectroscopy. 
+%% '' Lim, L. F., R. D. Starr, L. G. Evans, A. M. Parsons, M. E. Zolensky, W. 
+%% V. Boynton, 
+%% \& C. A. Thomas,  {\it AAS/Division for Planetary Sciences Meeting Abstracts} {\bf 46 }  415.07, 2014.  
+%% }
+
+% \resitem{ ``Thermal emission photometry of three near-Earth asteroids in L$'$ and M$'$. '' Lim, L., N. Moskovitz, C. Thomas, E. Howell, J. Emery, 
+% \& L. Benner,  {\it Asteroids, Comets, Meteors} {\bf 2014}, 318, 2014.  
+% }
+
+%% \resitem{ ``Thermal Emission Photometry of Three Near-Earth Asteroids in L' and M'. ''
+%%  Lim, L. F., N. A. Moskovitz, C. A. Thomas, E. S. Howell, J. P. Emery, 
+%% \& L. Benner,  {\it Lunar and Planetary Science Conference} {\bf 45 }, 1695, 2014.  
+%% }
+
+%% \resitem{ ``Thermal Emission Photometry of Deep Impact Flyby Target (163249) 2002 GT. 
+%% '' Lim, L. F., N. A. Moskovitz, J. Licandro, J. P. Emery, V. Reddy, F. 
+%% Vilas, 
+%% \& 2002 GT Observing Team,  {\it AAS/Division for Planetary Sciences Meeting Abstracts} {\bf 45 }, \#208.10, 2013.  
+%% }
+
+%% \resitem{ ``Capabilities of Gamma Ray and Neutron Spectrometers for Studying Trojan 
+%% Asteroid Composition.'' Parsons, A. M., L. Evans, L. Lim, 
+%% \& R. Starr,  {\it Lunar and Planetary Science Conference} {\bf 44 }, 2082, 2013.  
+%% }
+
+
+%% \resitem{ ``Miniature Lightweight X-Ray Optics (MiXO) for Solar System Exploration. 
+%% '' Hong, J., J. Grindlay, S. Romaine, B. Ramsey, R. P. Binzel, W. Boynton, 
+%% P. Georenstein, R. Kraft, A. Kenter, M. Elvis, S. Wolk, R. Smith, L. Lim, 
+%% C. Lisse, G. Branduardi-Raymont, B. Allen, 
+%% \& J. Lee,  {\it Lunar and Planetary Science Conference} {\bf 45 }, 2203, 2014.  
+%% }
+
+%% \resitem{ ``The Composition of the Dwarf Planet Ceres.'' Rivkin, A., J. Y. Li, R. E. 
+%% Milliken, L. F. Lim, A. Lovell, B. E. Schmidt, 
+%% \& L. A. McFadden,  {\it AGU Fall Meeting Abstracts} {\bf }, A4, 2012.  
+%% }
+
+%% \resitem{ ``An Active X-Ray Spectrometer Proposed for the SELENE-2 Rover.'' Kim, K. 
+%% J., Y. Amano, W. V. Boynton, G. Klingelh{\"o}fer, J. Br{\"u}ckner, N. Hasebe, D. 
+%% Hamara, R. D. Starr, L. F. Lim, G. Ju, T. J. Fagan, T. Ohta, 
+%% \& E. Shibamura,  {\it LPI Contributions} {\bf 1683 }, 1078, 2012.  
+%% }
+
+%% \resitem{ ``PADME (Phobos and Deimos and Mars Environment): A Proposed NASA Discovery 
+%% Mission to Investigate the Two Moons of Mars.'' Lee, P., M. Benna, D. 
+%% Britt, A. Colaprete, W. Davis, G. Delory, R. Elphic, E. Fulsang, A. Genova, 
+%% D. Glavin, W. Grundy, W. Harris, B. Hermalyn, B. Hine, M. Horanyi, D. 
+%% Hamilton, R. Johnson, T. Jones, S. Kempf, B. Lewis, L. Lim, P. Mahaffy, J. 
+%% Marshall, P. Michel, D. Mittlefehldt, S. Montez, Y. Nguyen, B. Owens, M. 
+%% Pajola, R. Park, C. Phillips, L. Plice, A. Poppe, J. E. Riedel, A. 
+%% Rivoldini, P. Rosenblatt, M. Schaible, M. Showalter, H. Smith, Z. 
+%% Sternovsky, P. Thomas, H. Yano, 
+%% \& M. Zolensky,  {\it Lunar and Planetary Science Conference} {\bf 46 }, 2856--, 2015.  
+%% }
+
+%% same item, more abbreviated
+%% \resitem{ ``PADME (Phobos and Deimos and Mars Environment): A Proposed NASA Discovery 
+%%   Mission to Investigate the Two Moons of Mars.'' Lee, P. {\it et al.},
+%%   {\it Lunar and Planetary Science Conference} {\bf 46 }, 2856, 2015.  
+%% }
+
+%% \resitem{ ``DARe: Dark Asteroid Rendezvous.'' Noll, K. S., L. A. McFadden, A. R. 
+%% Rhoden, L. F. Lim, W. V. Boynton, L. M. Carter, G. Collins, J. A. 
+%% Englander, S. Goossens, W. M. Grundy, J.-Y. Li, S. Mottola, J. Oberst, R. 
+%% Orosei, A. M. Parsons, F. Preusker, D. C. Reuter, A. A. Simon, C. A. 
+%% Thomas, K. Walsh, 
+%% \& M. E. Zolensky,  {\it Lunar and Planetary Science Conference} {\bf 46 }, 2835--, 2015.  
+%% }
+
+
+%% \resitem{ ``The Near-Earth Encounter of Asteroid 308635 (2005 YU55): Thermal IR 
+%% Observations.'' Lim, L. F., J. P. Emery, N. A. Moskovitz, M. W. Busch, B. 
+%% Yang, 
+%% \& M. Granvik,  {\it AAS/Division for Planetary Sciences Meeting Abstracts} {\bf 44 }, \#305.01, 2012.  
+%% }
+
+%% \resitem{ ``The Near-Earth Encounter of 2005 YU55: Thermal inertia and inferred 
+%% surface properties.'' Emery, J. P., L. F. Lim, 
+%% \& N. A. Moskovitz,  {\it LPI Contributions} {\bf 1667 }, 6453, 2012.  
+%% }
+
+%% \resitem{ ``The Near-Earth Encounter of 2005 YU55: Time-Resolved Visible and 
+%% Near-Infrared Spectroscopy.'' Moskovitz, N. A., B. Yang, L. F. Lim, M. 
+%% Willman, A. S. Rivkin, J. P. Emery, M. Granvik, 
+%% \& S. S. Sheppard,  {\it LPI Contributions} {\bf 1667 }, 6382, 2012.  
+%% }
+
+%% \resitem{ ``The Near-Earth Encounter of 2005 YU55: Thermal Infrared Observations from 
+%% Gemini North.'' Lim, L. F., J. P. Emery, N. A. Moskovitz, 
+%% \& M. Granvik,  {\it LPI Contributions} {\bf 1667 }, 6295, 2012.  
+%% }
+
+%% \resitem{ ``Capabilities of Gamma Ray and Neutron Spectrometers for Studying Trojan 
+%% Asteroid Subsurface Ices.'' Parsons, A. M., L. G. Evans, L. Lim, 
+%% \& R. Starr,  {\it Lunar and Planetary Science Conference} {\bf 43 }, 2769, 2012.  
+%% }
+
+%% \resitem{ ``The Near-Earth Encounter of 2005~YU55: Thermal Infrared Observations from 
+%% Gemini North.'' Lim, L. F., J. P. Emery, N. A. Moskovitz, 
+%% \& M. Granvik,  {\it Lunar and Planetary Science Conference} {\bf 43 }, 2202, 2012.  
+%% }
+
+%% \resitem{ ``The Near-Earth Encounter of Asteroid 2005 YU55: Visible and Near-Infrared 
+%% Spectroscopy.'' Moskovitz, N. A., B. Yang, L. F. Lim, J. P. Emery, M. 
+%% Granvik, S. S. Sheppard, M. Willman, 
+%% \& M. McMillan,  {\it Lunar and Planetary Science Conference} {\bf 43 }, 2080, 2012.  
+%% }
+
+%% \resitem{ ``Shape and Thermal Modeling of a Selection of M-Type Asteroids.'' Crane, 
+%% K. T., J. P. Emery, 
+%% \& L. F. Lim,  {\it Lunar and Planetary Science Conference} {\bf 43 }, 1425, 2012.  
+%% }
+
+%% \resitem{ ``Introduction to the Scientific Investigation of an Active X-Ray 
+%% Spectrometer for the SELENE-2 Rover.'' Kim, K. J., Y. Amano, W. V. 
+%% Boynton, G. Klingelh{\"o}fer, J. Br{\"u}ckner, D. Hamara, R. D. Starr, L. F. Lim, 
+%% N. Hasebe, G. Ju, T. J. Fagan, T. Ohta, 
+%% \& E. Shibamura,  {\it Lunar and Planetary Science Conference} {\bf 43 }, 1282, 2012.  
+%% }
+
+
+\resitem{ ``Multiple asteroid systems: Dimensions and thermal properties from Spitzer 
+Space Telescope and ground-based observations.'' Marchis, F., J. E. 
+Enriquez, J. P. Emery, M. Mueller, M. Baek, J. Pollock, M. Assafin, R. 
+Vieira Martins, J. Berthier, F. Vachier, D. P. Cruikshank, L. F. Lim, D. E. 
+Reichart, K. M. Ivarsen, J. B. Haislip, 
+\& A. P. LaCluyze,  {\it Icarus} {\bf 221 }, 1130--1161, 2012.  
+}
+
+
+\resitem{ ``Active neutron and gamma-ray instrumentation for in situ planetary 
+science applications.'' Parsons, A., J. Bodnarik, L. Evans, S. Floyd, L. 
+Lim, T. McClanahan, M. Namkung, S. Nowicki, J. Schweitzer, R. Starr, 
+\& J. Trombka,  {\it Nuclear Instruments and Methods in Physics Research A} {\bf 652}, 674--679, 2011.  
+}
+
+%% \resitem{ ``Olivine Composition of the Mars Trojan 5261 Eureka: Spitzer IRS Data.'' 
+%% Lim, L. F., J. P. Emery, M. Mueller, A. S. Rivkin, D. Trilling, 
+%% \& B. J. Burt,  {\it EPSC-DPS Joint Meeting 2011} {\bf }, 1199, 2011.  
+%% }
+
+
+
+\resitem{ ``Triplicity and physical characteristics of Asteroid (216) Kleopatra.'' 
+Descamps, P., F. Marchis, J. Berthier, J. P. Emery, G. Duch\&ecirc;ne, I. de 
+Pater, M. H. Wong, L. Lim, H. B. Hammel, F. Vachier, P. Wiggins, J.-P. 
+Teng-Chuen-Yu, A. Peyrot, J. Pollock, M. Assafin, R. Vieira-Martins, J. I. 
+B. Camargo, F. Braga-Ribas, 
+\& B. Macomber,  {\it Icarus} {\bf 211}, 1022--1033, 2011.  
+}
+
+
+
+%% \resitem{ ``Mineralogy and thermal properties of V-type Asteroid 956 Elisa: Evidence 
+%% for diogenitic material from the Spitzer IRS (5-35 \&mu;m) spectrum.'' Lim, L. 
+%% F., J. P. Emery, 
+%% \& N. A. Moskovitz,  {\it Icarus} {\bf 213 }, 510--523, 2011.  
+%% }
+
+%% \resitem{ ``Planetary Geochemistry Techniques: Probing In-Situ with Neutron and Gamma 
+%% Rays (PING) Instrument.'' Parsons, A., J. Bodnarik, D. Burger, L. Evans, 
+%% S. Floyd, L. Lim, T. McClanahan, M. Namkung, S. Nowicki, J. Schweitzer, R. 
+%% Starr, 
+%% \& J. Trombka,  {\it Lunar and Planetary Science Conference} {\bf 42 }, 2379, 2011.  
+%% }
+
+
+%%%%%
+%%   Put this one back in for X-ray proposals maybe
+%%
+%% \resitem{ ``The Effects of Surface Roughness on the NEAR XRS Elemental Results: 
+%% Monte-Carlo Modeling.'' Lim, L. F. 
+%% \& L. R. Nittler,  {\it Lunar and Planetary Science Conference} {\bf 42 }, 2222, 2011.  
+%% }
+
+%% \resitem{ ``Asteroid (101955) 1999 RQ36: Spectroscopy from 0.4 to 2.5 microns and 
+%% Meteorite Analogs.'' Clark, B. E., R. P. Binzel, E. Howell, E. A. Cloutis, 
+%% M. Ockert-Bell, P. Christensen, M. A. Barucci, F. DeMeo, D. Lauretta, H. 
+%% Connolly Jr., A. Soderberg, C. Hergenrother, 
+%% \& L. Lim,  {\it Bulletin of the American Astronomical Society} {\bf 42 }, 1086, 2010.  
+%% }
+
+%% \resitem{ ``Mid-IR Spectroscopy Of Main-belt Asteroids From MIRSI At The IRTF.'' 
+%% Lim, L. F., J. P. Emery, A. S. Rivkin, J. L. Hora, 
+%% \& M. Kassis,  {\it Bulletin of the American Astronomical Society} {\bf 42 }, 1036, 2010.  
+%% }
+
+
+%% \resitem{ ``The Composition of the Dwarf Planet Ceres.'' Rivkin, A. S., J. Y. Li, R. 
+%% E. Milliken, L. F. Lim, A. J. Lovell, B. E. Schmidt, 
+%% \& L. A. McFadden,  {\it LPI Contributions} {\bf 1538 }, 5266, 2010.  
+%% }
+
+%% \resitem{ ``A Unique Outside Neutron and Gamma Ray Instrumentation Development Test 
+%% Facility at NASA's Goddard Space Flight Center.'' Bodnarik, J., L. Evans, 
+%% S. Floyd, L. Lim, T. McClanahan, M. Namkung, A. Parsons, J. Schweitzer, R. 
+%% Starr, 
+%% \& J. Trombka,  {\it Lunar and Planetary Science Conference} {\bf 41 }, 2581, 2010.  
+%% }
+
+%% \resitem{ ``Planetary Geochemistry Using Active Neutron and Gamma Ray 
+%% Instrumentation.'' Parsons, A., J. Bodnarik, L. Evans, S. Floyd, L. Lim, 
+%% T. McClanahan, M. Namkung, J. Schweitzer, R. Starr, 
+%% \& J. Trombka,  {\it Lunar and Planetary Science Conference} {\bf 41 }, 2553, 2010.  
+%% }
+
+%% \resitem{ ``Mid-IR Spectra of HED Meteorites and Synthetic Pyroxenes: Reststrahlen 
+%% Features (9-12 \&micro;m).'' Lim, L. F., J. P. Emery, 
+%% \& N. A. Moskovitz,  {\it Lunar and Planetary Science Conference} {\bf 41 }, 2001, 2010.  
+%% }
+
+%% \resitem{ ``The Case for Ceres: Report to the Planetary Science Decadal Survey 
+%% Committee.'' Rivkin, A. S., J. C. Castillo, N. Abreu, E. I. Asphaug, A. F. 
+%% Cheng, B. E. Clark, B. A. Cohen, P. G. Conrad, P. O. Hayne, E. S. Howell, 
+%% T. V. Johnson, G. Y. Kramer, L. A. Lebofsky, J. Li, L. F. Lim, A. J. 
+%% Lovell, D. Matson, T. B. McCord, L. McFadden, W. B. McKinnon, R. Milliken, 
+%% W. B. Moore, J. H. Roberts, C. T. Russell, B. E. Schmidt, M. V. Sykes, P. 
+%% C. Thomas, 
+%% \& M. Y. Zolotov,  {\it AGU Fall Meeting Abstracts} {\bf }, A8, 2009.  
+%% }
+
+%% \resitem{ ``Spitzer IRS (8-30 micron) Spectra of Basaltic Asteroids 1459 Magnya and 
+%% 956 Elisa: Mineralogy and Thermal Properties.'' Lim, L. F., J. P. Emery, 
+%% \& N. A. Moskovitz,  {\it AAS/Division for Planetary Sciences Meeting Abstracts \#41} {\bf 41 }, $\#$53.08, 2009.  
+%% }
+
+%% \resitem{ ``The Case for Ceres: Report to the Planetary Science Decadal Survey 
+%% Committee.'' Rivkin, A. S., J. C. Castillo-Rogez, B. A. Cohen, P. G. 
+%% Conrad, J. Li, L. F. Lim, A. J. Lovell, T. M. McCord, L. A. McFadden, W. B. 
+%% McKinnon, R. E. Milliken, C. T. Russell, B. E. Schmidt, M. V. Sykes, 
+%% \& P. C. Thomas,  {\it AAS/Division for Planetary Sciences Meeting Abstracts \#41} {\bf 41 }, \#16.22, 2009.  
+%% }
+
+%% \resitem{ ``Diogenite-like Features in the Spitzer IRS (5-35 \&micro;m) Spectrum of 956 
+%% Elisa.'' Lim, L. F., J. P. Emery, 
+%% \& N. A. Moskovitz,  {\it Lunar and Planetary Science Conference} {\bf 40 }, 2204, 2009.  
+%% }
+
+%% \resitem{ ``Spitzer IRS Spectra of Basaltic Asteroids: Preliminary Results.'' Lim, 
+%% L. F., J. P. Emery, N. A. Moskovitz, H. Stewart, 
+%% \& F. Marchis,  {\it Bulletin of the American Astronomical Society} {\bf 40 }, 436, 2008.  
+%% }
+
+
+%% \resitem{ ``Composition of the Binary Main-Belt Asteroid (22) Kalliope.'' Marchis, 
+%% F., P. S. Hardersen, J. P. Emery, P. Descamps, V. Reddy, 
+%% \& L. F. Lim,  {\it Lunar and Planetary Science Conference} {\bf 39 }, 2526, 2008.  
+%% }
+
+%% \resitem{ ``Application of Monte-Carlo Simulation to Outstanding Problems in X-Ray 
+%% Fluorescence Spectroscopy.'' Lim, L. F. 
+%% \& L. R. Nittler,  {\it Lunar and Planetary Science Conference} {\bf 39 }, 1533, 2008.  
+%% }
+
+\resitem{ ``Multi-wavelength observations of Asteroid 2100 Ra-Shalom.'' Shepard, M. 
+K., B. E. Clark, M. C. Nolan, L. A. M. Benner, S. J. Ostro, J. D. Giorgini, 
+F. Vilas, K. Jarvis, S. Lederer, L. F. Lim, T. McConnochie, J. Bell, J.-L. 
+Margot, A. Rivkin, C. Magri, D. Scheeres, 
+\& P. Pravec,  {\it Icarus} {\bf 193 }, 20--38, 2008.  
+}
+
+%% \resitem{ ``Asteroids and Centaurs: Silicate Emission in the Thermal Infrared.'' 
+%% Emery, J. P., L. F. Lim, F. Marchis, 
+%% \& D. P. Cruikshank,  {\it LPI Contributions} {\bf 1405 }, 8345, 2008.  
+%% }
+
+%% \resitem{ ``Elemental Composition of 433 Eros: New Calibration of the NEAR-Shoemaker 
+%% XRS Data.'' Lim, L. F. 
+%% \& L. R. Nittler,  {\it AGU Fall Meeting Abstracts} {\bf }, A223, 2007.  
+%% }
+
+%% \resitem{ ``Mid-IR Spectroscopy of M Asteroids with the Spitzer Space Telescope: How 
+%% Many are Really Differentiated Cores?.'' Emery, J. P., L. F. Lim, 
+%% \& T. H. McConnochie,  {\it LPI Contributions} {\bf 1335 }, 37--38, 2006.  
+%% }
+
+\resitem{ ``Minor element evidence that Asteroid 433 Eros is a space-weathered 
+ordinary chondrite parent body.'' Foley, C. N., L. R. Nittler, T. J. 
+McCoy, L. F. Lim, M. R. M. Brown, R. D. Starr, 
+\& J. I. Trombka,  {\it Icarus} {\bf 184 }, 338--343, 2006.  
+}
+
+%% \resitem{ ``A Spitzer IRS Survey Of Hydrated and Non-Hydrated M Asteroids: 
+%% Preliminary 5--13 Micron Results.'' Lim, L. F. 
+%% \& J. P. Emery,  {\it Bulletin of the American Astronomical Society} {\bf 38 }, 626, 2006.  
+%% }
+
+%% \resitem{ ``Mid-IR Spectroscopy of M Asteroids with the Spitzer IRS: Preliminary 
+%% Results.'' Lim, L. F., J. E. Emery, 
+%% \& T. H. McConnochie,  {\it 37th Annual Lunar and Planetary Science Conference} {\bf 37 }, 2148, 2006.  
+%% }
+
+\resitem{ ``Pulsed neutron generator system for astrobiological and geochemical 
+exploration of planetary bodies.'' Akkurt, H., J. L. Groves, J. Trombka, 
+R. Starr, L. Evans, S. Floyd, R. Hoover, L. Lim, T. McClanahan, R. James, 
+T. McCoy, 
+\& J. Schweitzer,  {\it Nuclear Instruments and Methods in Physics Research B} {\bf 241 }, 232--237, 2005.  
+}
+
+\resitem{ ``Thermal infrared (8--13 \micronup) spectra of 29 asteroids:
+  the Cornell 
+Mid-Infrared Asteroid Spectroscopy (MIDAS) Survey.'' Lim, L. F., T. H. 
+McConnochie, J. F. Bell, 
+\& T. L. Hayward,  {\it Icarus} {\bf 173}, 385--408, 2005.  
+}
+
+%% \resitem{ ``Cr, Mn, and Ni on 433 Eros: Further Evidence of Ordinary Chondrite 
+%% Composition.'' Foley, C. N., L. R. Nittler, M. R. M. Brown, T. J. McCoy, 
+%% \& L. Lim,  {\it Meteoritics and Planetary Science Supplement} {\bf 40 }, 5233, 2005.  
+%% }
+
+%% \resitem{ ``Thermal Infrared (8-13 micron) Spectra of the NEA 2100 Ra-Shalom.'' Lim, 
+%% L. F., J. P. Emery, 
+%% \& T. H. McConnochie,  {\it Bulletin of the American Astronomical Society} {\bf 37 }, 629, 2005.  
+%% }
+
+
+%% \resitem{ ``Elemental Composition of 433 Eros: New Calibration of the NEAR-Shoemaker 
+%% XRS Data.'' Lim, L. F., L. R. Nittler, R. D. Starr, 
+%% \& T. P. McClanahan,  {\it 36th Annual Lunar and Planetary Science Conference} {\bf 36 }, 2031, 2005.  
+%% }
+
+%% \resitem{ ``Chromium on Eros: Further Evidence of Ordinary Chondrite Composition.'' 
+%% Foley, C. N., L. R. Nittler, M. R. M. Brown, T. J. McCoy, 
+%% \& L. F. Lim,  {\it 36th Annual Lunar and Planetary Science Conference} {\bf 36 }, 2017, 2005.  
+%% }
+
+%% \resitem{ ``Asteroid spectroscopy: I. A thermal infrared survey of asteroids. II. 
+%% X-ray fluorescence spectroscopy of 433 Eros.'' Lim, L. F. G.,  {\it Ph.D. 
+%% Thesis} {\bf }, -, 2005.  
+%% }
+
+%% \resitem{ ``Major-Element Ratios of 433 Eros: New Calibration of the NEAR-Shoemaker 
+%% X-ray Spectrometer Data.'' Lim, L. F., L. R. Nittler, R. D. Starr, 
+%% \& T. P. McClanahan,  {\it Bulletin of the American Astronomical Society} {\bf 36 }, 1138, 2004.  
+%% }
+
+%% \resitem{ ``Calibration of the NEAR XRS Solar Monitor.'' Lim, L. F., L. R. Nittler, 
+%% R. D. Starr, 
+%% \& T. P. McClanahan,  {\it Lunar and Planetary Science Conference} {\bf 35 }, 1295, 2004.  
+%% }
+
+%% \resitem{ ``Multi-Wavelength Observations of Asteroid 2100 Ra-Shalom: Visible, 
+%% Infrared, and Thermal Spectroscopy Results.'' Clark, B. E., M. Shepard, S. 
+%% J. Bus, F. Vilas, A. S. Rivkin, L. Lim, S. Lederer, K. Jarvis, S. Shah, 
+%% \& T. McConnochie,  {\it Lunar and Planetary Science Conference} {\bf 35 }, 1120, 2004.  
+%% }
+
+%% \resitem{ ``A Search for Manganese and Chromium Abundances in NEAR-Shoemaker X-ray 
+%% Spectra of 433 Eros.'' Lim, L. F., L. R. Nittler, T. J. McCoy, 
+%% \& R. D. Starr,  {\it Bulletin of the American Astronomical Society} {\bf 35 }, 979, 2003.  
+%% }
+
+%% \resitem{ ``The Cornell Mid-Infrared Asteroid Spectroscopy (MIDAS) Survey: Results 
+%% from 2001.'' Lim, L. F., J. F. Bell, T. H. McConnochie, B. E. Clark, 
+%% \& T. L. Hayward,  {\it Bulletin of the American Astronomical Society} {\bf 34 }, 841, 2002.  
+%% }
+
+%% \resitem{ ``The NEAR-Shoemaker X-Ray Spectrometer: Latest Results and Future Analysis 
+%% Plans.'' Starr, R. D., L. R. Nittler, L. Lim, T. J. McCoy, T. H. Burbine, 
+%% G. C. Ho, 
+%% \& J. I. Trombka,  {\it Lunar and Planetary Science Conference} {\bf 33 }, 1499, 2002.  
+%% }
+
+%% \resitem{ ``The NEAR-Shoemaker XGRS Experiment: An End of Mission Overview.'' 
+%% Trombka, J. I., R. D. Starr, L. R. Nittler, L. G. Evans, T. J. McCoy, W. V. 
+%% Boynton, T. H. Burbine, J. Br{\"u}ckner, P. Gorenstein, S. W. Squyres, R. C. 
+%% Reedy, J. O. Goldsten, L. Lim, K. Hurley, P. E. Clark, S. R. Floyd, T. P. 
+%% McClanahan, E. McCartney, J. Branscomb, J. S. Bhangoo, I. Mikheeva, 
+%% \& M. E. Murphy,  {\it Lunar and Planetary Science Conference} {\bf 33 }, 1340, 2002.  
+%% }
+
+\resitem{ ``Ground-Based Observations of the 10 August 1995 Saturn Ring-Plane 
+Crossing.'' Scharringhausen, B. R., L. Lim, P. D. Nicholson, K. Matthews, 
+\& P. J. McGregor,  {\it Icarus} {\bf 154 }, 287--295, 2001.  
+}
+
+%% \resitem{ ``Initial Results of the Cornell Mid-IR Asteroid Spectroscopy Survey.'' 
+%% Lim, L. F., J. F. Bell, B. E. Clark, T. H. McConnochie, T. L. Hayward, A. 
+%% Barucci, 
+%% \& E. Dotto,  {\it Bulletin of the American Astronomical Society} {\bf 33 }, 1119, 2001.  
+%% }
+
+%% \resitem{ ``Elemental Composition of Asteroid 433 Eros: Results from the 
+%% NEAR-Shoemaker X-Ray/Gamma-Ray Spectrometer and Comparison with Meteorites. 
+%% '' Boynton, W. V., J. I. Trombka, R. D. Starr, L. G. Evans, L. R. Nittler, 
+%% T. J. McCoy, T. H. Burbine, J. Bruckner, P. Gorenstein, S. W. Squyres, J. 
+%% O. Goldsten, L. Lim, K. Hurley, R. C. Reedy, P. E. Clark, S. R. Floyd, T. 
+%% P. McClanahan, J. E. McCartney, J. Branscomb, D. K. Hamara, J. S. Bhangoo, 
+%% I. Mikheeva, 
+%% \& M. E. Murphy,  {\it Meteoritics and Planetary Science Supplement} {\bf 36 }, 27, 2001.  
+%% }
+
+%% \resitem{ ``The Role of Viscous Deformation in the Morphology of the Martian North 
+%% Polar Cap.'' Zuber, M. T., L. Lim, 
+%% \& H. J. Zwally,  {\it LPI Contributions} {\bf 953 }, 45, 1998.  
+%% }
+
+
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% \begin{ressection}{Selected Co-Authored Papers}
+
+%% %%\begin{reslist}%%{Selected Co-Authored Papers}{}
+
+%%     \item{
+%% Scharringhausen, B.~R., Lim, L., Nicholson, P.~D., Matthews, K., \& 
+%% McGregor, P.~J.
+%% ``Ground-Based Observations of the 10 August 1995 Saturn Ring-Plane Crossing.''
+%% {\it Icarus} {\bf 154}, p.~287, 2001.
+%% }
+
+
+%%\end{reslist}
+
+
+%%\end{ressection}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% \begin{ressection}{Awards and Fellowships}
+
+%%     \resitem{National Science Foundation Graduate Research Fellow, 1998--2001;
+%%             Goldwater Scholar, 1998; National Merit Scholar, 1994}
+
+%% \end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
