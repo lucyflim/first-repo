@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>MacBackup.html</title>
+</head>
+<body>
+<h4>Backing up to an External Firewire Drive</h4>
+Equipment:
+<ul>
+  <li>One Seagate Backup Plus portable drive</li>
+  <li>One Seagate STAE102 "FreeAgent GoFlex Upgrade Cable FireWire 800"</li>
+</ul>
+Steps:<br>
+<ul>
+  <li>Used "Disk Utility" to establish a GUID partition table for the Seagate.
+</li>
+  <li>Used "Disk Utility" to establish at least one HFS+ 
+(Mac OS Extended (Journaled), NOT case-sensitive) on the Seagate.
+</li>
+  <li>Again using "Disk Utility", "restore" the Mac drive to the
+external journaled partition.</li>
+  <ul>
+    <li>If you run the "Disk Utility" off the OS X disc (that is,
+booting your Mac off of the disc instead of your hard drive and then
+running it) you can automatically make the external backup
+bootable.&nbsp; Otherwise it won't necessarily be, but you can fix that
+(see below).</li>
+  </ul>
+  <li>To update the backups, use rsync.
+      (Caution:  following this method as described will erase
+everything else on the backup volume.)</li>
+  <ul>
+    <li>
+<a href="http://nicolasgallagher.com/mac-osx-bootable-backup-drive-with-rsync/">
+nicholasgallagher.com</a> provides a good shell-script wrapper for the rsync
+command.  It handles stuff like checking the readability/writeability 
+of the drives beforehand and incorporates an exclusion list and all the 
+appropriate flags into the rsync call. 
+</li>
+    <li>For best results, before running this the stock OS X rsync
+should be updated, like <a href="https://discussions.apple.com/message/17210439#17210439">this</a>:
+<pre><code>
+Just d/l it from http://rsync.samba.org/ and compile as follows:
+
+Download and unarchive rsync and its patches
+
+          Move patches directory to rsync-3.0.9
+          cd rsync-3.0.9
+
+Apply patches relevant to preserving Mac OS X metadata
+
+          patch -p1 &lt;patches/fileflags.diff
+          patch -p1 &lt;patches/crtimes.diff
+
+Apply patch relevant to preserving Mac OS X hfs+compression
+
+          patch -p1 &lt;patches/hfs-compression.diff
+
+Configure, make, install
+
+        ./prepare-source
+        ./configure
+        make
+        sudo make install
+
+Verify your installation
+
+          rsync --version
+
+By default, rsync will be installed in /usr/local/bin. If that isn't 
+in your path, you will need to call your new version of rsync by its 
+absolute path (/usr/local/bin/rsync).
+</code>
+</pre>
+
+This version will allow the --hfs-compression and --protect-decmpfs
+flags to work.  The actual rsync line will then include these two
+flags which will avert a certain amount of "bloat" in the backup
+volume (see <a href="https://discussions.apple.com/thread/4177844?start=0&tstart=0">here</a>).
+</li>
+
+  <li>
+Gallagher's script includes the "bless" command, which looks like this:
+<pre>$ sudo bless -folder "/Volumes/Backup/System/Library/CoreServices/" </pre>
+</li>
+<li>
+At the very end after rebooting from the new drive, it is necessary to
+enter one final command to get rid of the "dyld: shared cached file"
+error messages:
+<pre>$ sudo update_dyld_shared_cache -force</pre>
+</li>
+</ul><br>
+<br>
+</div>
+Now it's a bootable mirror!  Yay!<br>
+<div style="margin-left: 40px;"> </div>
+<br>
+<hr>
+Back to </a><a href="http://web.mit.edu/lucylim/www/NewMacIntel.html">NewMacIntel.html</a>
+
+
+</body></html>

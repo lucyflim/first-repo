@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>MacRecovery.html</title>
+</head>
+<body>
+<h3>Recovering my Mac stuff after a Hard Drive Failure, September 2005</h3>
+<ul>
+  <li>Opening "registration" sequence from Apple</li>
+  <ul>
+    <li>network setup with DHCP, re-entered wi-fi name and $+key</li>
+    <li>calibrated the monitor</li>
+  </ul>
+  <li>Replaced RAM and rebooted</li>
+  <li>Ran "Software Update".&nbsp; This took a while.&nbsp; For some
+reason the iCal update didn't work the first time.</li>
+  <li>Reboot</li>
+  <hr style="width: 100%; height: 2px;"> <li>Downloaded Mozilla Firefox</li>
+  <li>Imported iPhoto library successfully.&nbsp; <br>
+  </li>
+  <ul>
+    <li>The backup CD had an "iPhoto Library" directory with
+"AlbumData.xml", "Dir.data", and "Library.data", and then directories
+"2003", "2004", and "Albums".</li>
+    <li>Starting iPhoto with shift+option brought up a dialogue prompt
+for rebuilding the iPhoto library.</li>
+    <li>Imported more photos from a second backup CD.&nbsp; Used an
+applescript to batch-add comments.</li>
+  </ul>
+  <li>Installed Developer Tools:&nbsp;
+/Applications/Installers/DeveloperTools/Developer.mpkg</li>
+  <li>Downloaded X11User.dmg and Port Authority.dmg (the latter for
+DarwinPorts)</li>
+  <li>Installed X11</li>
+  <li>Re-building the iTunes library</li>
+  <ul>
+    <li>Installed Senuti</li>
+    <li>Used Senuti to restore music and playlists from iPod</li>
+    <li>Rebuilt smart playlists manually</li>
+  </ul>
+  <li>Restoring Firefox (web browser) stuff</li>
+  <ul>
+    <li>Loaded bookmarks from another computer</li>
+    <li>Installed Flashblock extension</li>
+    <li>Re-entered font preferences</li>
+    <li>Scrolling skipped too many lines at a time.&nbsp; Reduced
+Firefox mouse wheel scrolling step using about:config (type in into the
+navigation bar).<br>
+    </li>
+    <ul>
+      <li>mousewheel.withnokey.numlines 3</li>
+      <li>mousewheel.withnokey.sysnumlines false</li>
+    </ul>
+    <li>Play images only once (again, about:config)<br>
+    </li>
+    <ul>
+      <li>image.animation_mode&nbsp; once<br>
+      </li>
+    </ul>
+  </ul>
+  <li>Installed DoubleCommand to make the "enter" key into an "fn" key
+for one-handed page up and page down</li>
+  <li>Another round of Software Update (this time iCal updated fine)</li>
+  <li>Installed X11 SDK</li>
+  <li>Installed DarwinPorts</li>
+  <li>Used System Preferences --&gt; Sharing to rename the computer
+    <hr style="width: 100%; height: 2px;"></li>
+  <li>Imported mail from another (Linux) computer</li>
+  <ul>
+    <li>"maildir" had to be converted to "mbox" within kmail to be
+importable into Mail.app</li>
+  </ul>
+  <ul>
+    <li>Set up IMAP account again</li>
+  </ul>
+  <li>Show hidden files in the Finder</li>
+  <ul>
+    <li>from Terminal, "defaults write com.apple.finder
+AppleShowAllFiles -bool true"</li>
+    <li>then, "killall Finder".&nbsp; Finder restarts itself with the
+new preferences.</li>
+  </ul>
+  <hr style="width: 100%; height: 2px;"> <li>Installing IDL</li>
+  <ul>
+    <li>IDL 5.3 lacked a "Darwin" option in xinstall.sh</li>
+    <li>5.6 was OK.&nbsp; 249.3 MB<br>
+    </li>
+    <ul>
+      <li>creates /usr/local/rsi and /usr/local/bin</li>
+      <li>skipped license setup for now</li>
+    </ul>
+  </ul>
+  <li>Emacs Adventures</li>
+  <ul>
+    <li>Installed Aquamacs Emacs.&nbsp; 120 MB (!)&nbsp; But it
+couldn't launch IDL plots in X11.</li>
+    <li>Carbon Emacs (48.6 MB):</li>
+    <ul>
+      <li>"<a href="http://home.att.ne.jp/alpha/z123/emacs-mac-e.html">/home.att.ne.jp/alpha/z123/emacs-mac-e.html</a>"</li>
+      <li>Setting up color syntax highlighting, custom font, location
+of IDL (for running the IDL shell from within idlwave mode), and
+reducing the mouse scrolling increment to 2 lines.&nbsp; Created the
+"~/.emacs" file with the following contents:<br>
+        <pre>(global-font-lock-mode 1)</pre>
+        <pre><br>;;10pt Monaco</pre>
+        <pre>(set-default-font "-apple-monaco-medium-r-normal--10-120-75-75-m-120-mac-roman")</pre>
+        <pre><br>(setq column-number-mode t)</pre>
+        <pre>(setq standard-indent 2)</pre>
+        <pre>(setq scroll-step 1)</pre>
+        <pre>(setq idlwave-shell-explicit-file-name "/usr/local/rsi/idl/bin/idl")</pre>
+        <pre>(setq idlwave-shell-automatic-start t)</pre>
+        <pre>(global-set-key [wheel-up]'(lambda ()(interactive)(scroll-down 2)))</pre>
+        <pre>(global-set-key [wheel-down]'(lambda ()(interactive)(scroll-up 2)))</pre>
+        <pre>(setq mouse-wheel-scroll-amount '(2.1))</pre>
+        <br>
+      </li>
+      <li>Emacs comes with IDLWAVE 5.7_22</li>
+      <ul>
+        <li>attempts to plot from within the IDLWAVE shell gave
+"Unsupported X Windows Visual"</li>
+      </ul>
+      <ul>
+        <li>Made ~/.startup.idl</li>
+        <ul>
+          <li>device,true_color=15</li>
+          <li>device,decomposed=0</li>
+        </ul>
+        <li>created and edited ~/.MacOSX/environment.plist using
+/Developer/Applications/Utilities/PropertyListEditor.app<br>
+        </li>
+        <ul>
+          <li>key IDL_STARTUP, string "~/.startup.idl"</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>X11 must be started before attempting to plot!</li>
+      </ul>
+    </ul>
+  </ul>
+  <li>Installed Fugu for file transfers</li>
+  <li>Installed VLC (12 MB)</li>
+  <li>Created ~/Library/iTunes/Scripts and put the "Selected Tracks
+Bookmarkable" script in it<br>
+  </li>
+</ul>
+<br>
+<hr>
+<a name="bootablebackup">
+<h4>Coda: Backing up to an External Firewire Drive</h4>
+Equipment:
+<ul>
+  <li>One Seagate Barracuda (five-year warranty!)</li>
+  <li>One Mapower drive enclosure to put it in, with firewire and USB2
+connections and cables</li>
+</ul>
+Steps:<br>
+<ul>
+  <li>Used "Disk Utility" to partition the Barracuda:&nbsp; one
+journaled HFS+ partition of the same size as my Mac drive fo the
+bootable backup, and two non-journaled HFS partitions for other
+purposes.</li>
+  <li>Again using "Disk Utility", "restore" the Mac drive to the
+external journaled partition.</li>
+  <ul>
+    <li>If you run the "Disk Utility" off the OS X disc (that is,
+booting your Mac off of the disc instead of your hard drive and then
+running it) you can automatically make the external backup
+bootable.&nbsp; Otherwise it won't necessarily be, but you can fix that
+(see below).</li>
+  </ul>
+  <li>To update the backups, use RsyncX.</li>
+  <ul>
+    <li>RsyncX has a checkbox that says "Bootable Source", but after I
+used RsyncX even with it checked, the drive disappeared from the
+bootable list that comes up when you hold down "option" and boot!</li>
+    <li>Use the "archive" radio button to preserve stuff like file
+timestamps.</li>
+  </ul>
+  <li>After using RsyncX, the external drive can be made bootable again
+like this:</li>
+</ul>
+<div style="margin-left: 40px;">$ sudo bless -folder
+"/Volumes/VingiMirror/System/Library/CoreServices/" -bootinfo
+"/Volumes/VingiMirror/usr/standalone/ppc/bootx.bootinfo"<br>
+<br>
+</div>
+Now it's bootable again!&nbsp; Yay!<br>
+<div style="margin-left: 40px;"> </div>
+<ul>
+</ul>
+<br>
+<hr>
+Back to </a><a href="http://web.mit.edu/lucylim/www/mac_startup.html">mac_startup.html</a>
+
+
+</body></html>
