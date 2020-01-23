@@ -102,13 +102,10 @@
 
 </tbody></table>
 
-<pre></pre>
 
 
-<p>
 [Wikipedia explaining the BWV catalogue numbers](https://en.wikipedia.org/wiki/Bach-Werke-Verzeichnis)
-</p><pre>
-</pre>
+
 
 
 <p>
