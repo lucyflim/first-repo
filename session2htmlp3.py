@@ -14,7 +14,11 @@
 #                    output to stdout
 ################################################################################
 
-
+# "This Python 3 script requires the LZ4 bindings for Python, see: https://pypi.python.org/pypi/lz4"
+#
+# make sure lz4 for python is installed:
+# $ conda install lz4
+#
 import os, sys, json, time, argparse, lz4.block
 import pathlib
 from xml.sax.saxutils import escape
@@ -46,6 +50,9 @@ args = parser.parse_args()
 
 # read session file and parse it to json structure
 # decompress if necessary
+# "This file format is in fact just plain LZ4 data with a custom header (magic number [8 bytes] and
+#  uncompressed file size [4 bytes, little endian])."
+#
 ##ss = json.loads(args.sessionfile.read().decode("utf-8"))
 bytfile = args.sessionfile.name
 print(bytfile)
@@ -99,14 +106,13 @@ for window in ss["windows"]:
     wcount += 1
     args.outputfile.write('<p> ------- New Window '+str(wcount)+' page count '+str(pcount)+' ------- </p> \n')
     wpcount = 0
-##   print '<p> Page Count: ',pcount,'</p>'
     print("windows processed: {0}".format(wcount))
     for tab in window["tabs"]:
         entries = tab["entries"]
         args.outputfile.write('<li>#{0} in window {1}<ul style="list-style-type:none">'.format(
               counter, wcount))
         for entry in entries:
-#            url = entry["url"].encode("utf-8")
+#            url = entry["url"].encode("utf-8")  # utf-8 encoding not needed in python3
             url = entry["url"]
 #            title = html_escape(entry.get("title", url)).encode("utf-8")
             title = html_escape(entry.get("title", url))
