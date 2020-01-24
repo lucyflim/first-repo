@@ -43,22 +43,14 @@ parser.add_argument("-o", dest="outputfile", type=argparse.FileType('w'),
       to OUTPUT_FILE; if not defined write html output to stdout")    
 args = parser.parse_args()
 
-# debugging
-# print(parser.parse_args())
-# print(args.sessionfile)
-# print(args.sessionfile.name)
 
 # read session file and parse it to json structure
 # decompress if necessary
 # "This file format is in fact just plain LZ4 data with a custom header (magic number [8 bytes] and
 #  uncompressed file size [4 bytes, little endian])."
 #
-##ss = json.loads(args.sessionfile.read().decode("utf-8"))
 bytfile = args.sessionfile.name
 print(bytfile)
-#byt = read_bytes(bytfile)
-
-#byt = args.sessionfile.read_bytes()
 bytpath = pathlib.Path.cwd() / bytfile
 byt = bytpath.read_bytes()
 if byt[:8] == b'mozLz40\0':
@@ -80,8 +72,6 @@ if "session" in ss:
     if "lastUpdate" in ss["session"]:
         lastUpdateInfo = "<p>Recorded session.lastUpdate {0}</p>".format(
               time.ctime(ss["session"]["lastUpdate"]/1000.0))
-
-
 
 args.outputfile.write("""
 <html>
