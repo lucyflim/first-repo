@@ -97,7 +97,7 @@ for window in ss["windows"]:
     args.outputfile.write(pline)
     args.outputfile.write('<hr>\n')
     wcount += 1
-    args.outputfile.write('<p> ------- New Window '+str(wcount)+' page count '+str(pcount)+' ------- </p> \n')
+    args.outputfile.write('<p> ------- New Window '+str(wcount)+' ------- </p> \n')
     wpcount = 0
     print("windows processed: {0}".format(wcount))
     for tab in window["tabs"]:
