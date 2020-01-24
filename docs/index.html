@@ -45,16 +45,17 @@ to Gunung Mulu National Park</a>.
   </p>
   <h3>Method 1 (two-step decompression and html conversion)</h3>
 Python code (not my code) to <a href="https://gist.github.com/mirogula/de2e5cf5303b815b272c">convert Firefox saved session information 
-  (now in recovery.jsonlz4) to html</a>. <p>
-  Step 1 is now to uncompress the Firefox .jsonlz4 file (compressed in a weird LZ4 format, for reasons known only to Mozilla) 
+  (now in recovery.jsonlz4) to html</a>. 
+  <ul>
+  <li>Step 1 is now to uncompress the Firefox .jsonlz4 file (compressed in a weird LZ4 format, for reasons known only to Mozilla) 
   to a normal json file.  One way to do this is via the firefox extension "mozlz4-edit" which will export to a suitable text format
   via "Save as JSON".  Another way is to use <a href="https://gist.github.com/kaefer3000/73febe1eec898cd50ce4de1af79a332a">mozlz4a.py</a>:
   <pre> $ python3 mozlz4a.py -d recovery.jsonlz4 recovery_json.txt</pre>
   <p>
-    Step 2 is to convert the resulting text (JSON) file to human-readable HTML:
+    <li>Step 2 is to convert the resulting text (JSON) file to human-readable HTML:
 <pre>$ python session2html.py -s recovery_json.txt -o recovery-pagelist.html
   </pre>
-<p> @mirogula's <a href="https://gist.github.com/mirogula/de2e5cf5303b815b272c">session2html</a>
+  </ul><p> @mirogula's <a href="https://gist.github.com/mirogula/de2e5cf5303b815b272c">session2html</a>
   was based in turn on <a href="https://gist.github.com/warner/2690106">@warner's make-html.py</a>.
   These earlier codes worked on the uncompressed JSON files as produced by earlier versions of Firefox.
   </p>
