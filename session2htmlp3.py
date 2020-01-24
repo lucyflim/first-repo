@@ -93,8 +93,8 @@ wcount = 0
 for window in ss["windows"]:
     ## LL additions: keep a running count of pages,
     ## try to separate windows
-    pline = '<p> Page Count: '+str(pcount)+' </p>'
-    args.outputfile.write(pline)
+#    pline = '<p> Page Count: '+str(pcount)+' </p>'
+#    args.outputfile.write(pline)
     args.outputfile.write('<hr>\n')
     wcount += 1
     args.outputfile.write('<p> ------- New Window '+str(wcount)+' ------- </p> \n')
@@ -118,7 +118,10 @@ for window in ss["windows"]:
         counter += 1
         pcount += 1
         wpcount += 1
-        args.outputfile.write("""
+    wpline = '<p> Window '+str(wcount)+' Page Count: '+str(wpcount)+'; Total page count: '+str(pcount)+' </p>'
+    args.outputfile.write(wpline)
+#
+args.outputfile.write("""
 </ul>
 <p></p>
 </body>
