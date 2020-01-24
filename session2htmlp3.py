@@ -3,9 +3,9 @@
 ################################################################################
 # usage: session2htmlp3.py [-h] -s SESSION_FILE [-o OUTPUT_FILE]
 # example: 
-# $ python3 session2html_editp3.py -s inouborecovery.jsonlz4 -o inouborecovery-out6.html
+# $ python3 session2htmlp3.py -s recovery.jsonlz4 -o recovery-out.html
 #
-# Convert Firefox sessionstore.js file to html.
+# Convert Firefox recovery.jsonlz4 file to html.
 #
 # optional arguments:
 #   -h, --help       show this help message and exit
