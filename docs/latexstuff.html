@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>Useful Stuff I Have Learned about LaTeX</title>
+</head>
+
+<h3>How to set the depth of the table of contents</h3>
+<pre>\setcounter{tocdepth}{n}
+</pre>
+where n is the level, starting with 0 (chapters only)
+
+<p>
+also, there's a package "tocvsec2" in case you need to vary the depth by section
+</p>
+<hr>
+<p>
+I discovered the useful bibliography style <a href="http://www-pord.ucsd.edu/~sgille/how_to/papers/agu.bst">agu.bst</a>
+</p>
+
+<hr>
+
+You can get your text to wrap around your figures using 
+<a href="http://www.andy-roberts.net/misc/latex/latextutorial6.html">
+wrapfig
+</a>.
+
+<hr>
+
+<h2>Fonts</h2>
+
+<p>
+It is necessary to find the right copy of updmap.cfg and make sure it has
+the ".map" file for your font in it:
+</p><pre>$ tail ~/.texmf-config/web2c/updmap.cfg 
+# FPL, free substitutes for the commercial Palatino SC/OsF fonts
+# are available from CTAN:fonts/fpl; used by psnfss 9.2.
+Map fpls.map
+#! Map example.map
+Map ugm.map
+Map pad.map
+Map myfonts.map
+</pre>
+
+Since then I've added "pgs.map" for Gill Sans.
+
+<p>My texmf trees turned out to be in several places:
+
+</p><pre> 
+$ sudo texhash
+texhash: Updating ~/.texmf-config/ls-R... 
+texhash: Updating ~/.texmf-var/ls-R... 
+texhash: Updating ~/Library/texmf/ls-R... 
+texhash: Updating /sw/etc/texmf-config/ls-R... 
+texhash: Updating /sw/share/texmf/ls-R... 
+texhash: Updating /sw/share/texmf-dist/ls-R... 
+texhash: Updating /sw/share/texmf-local/ls-R... 
+texhash: Updating /sw/var/lib/texmf/ls-R... 
+texhash: Done.
+</pre>
+<!-- However, /sw/etc/texmf.local <i>appeared</i> to also be a place to unzip -->
+<!-- font packages. -->
+<p>
+You also have to run <a href="https://web.archive.org/web/20100616144400/http://stuff.mit.edu:80/people/lucylim/updmap-output.html">updmap</a>.
+</p>
+
+<h3> Some font stuff that is usually in my latex preambles:</h3>
+
+<pre>\usepackage[T1]{fontenc}
+%%\usepackage[applemac]{inputenc}
+\usepackage{textcomp}
+
+\usepackage{pslatex}
+
+\usepackage{palatino}
+%%\usepackage{xagaramon}
+%%\usepackage{garamond}
+%%\usepackage{bookman}
+
+</pre>
+(with the "garamond" package it is apparently necessary to put the command
+<pre>\garamond
+</pre>
+in the text to make it actually use URW Garamond as the default font.)
+
+<hr>
+<h3> Non-Italicized Greek Letters </h3>
+<pre>\usepackage{bm}
+\usepackage{upgreek}
+\makeatletter
+\newcommand{\bfgreek}[1]{\bm{\@nameuse{up#1}}}
+\makeatother
+\parindent=0pt
+%% The default upright $\upmu$. Written with \verb|$\upmu$| in mathmode.
+
+%% \verb|$\bfgreek{mu}$| will allow you to type $\bfgreek{mu}$ to obtain an upright boldface $\mu$.
+\newcommand{\micamp}{\mbox{$\bfgreek{mu}$A}}
+\newcommand{\micronup}{\mbox{$\bfgreek{mu}$m}}
+</pre>
+<hr>
+<hr>
+<p>
+The Infamous Mac PDF Font Cache Bug (used to come up when using LaTeX):<br>
+<br>
+<a href="http://www.tug.org/mactex/fontcache/">Detailed explanation and fix from TeX Users Group</a>
+</p>
+<p>
+<a href="http://stackoverflow.com/questions/382608/fonts-in-pdf-documents-screwed-up-when-generated-with-latex-specifically-pdflat">Quick and dirty fix:</a>
+</p><pre>$ atsutil server -shutdown
+</pre>
+<hr>
+
+<a href="http://mintaka.sdsu.edu/GF/bibliog/latex/floats.html">
+Getting floats to span columns</a>
+and peacefully coexist with text in a two-column layout,
+such as an 
+<a href="http://rossbeyer.net/software/lpsc_template/download/current/">
+LPSC abstract</a>:
+<pre>\setcounter{dbltopnumber}{2}    % for 2-column pages
+<!-- \setcounter{dblbottomnumber}{2}    % for 2-column pages -->
+\renewcommand{\dbltopfraction}{0.9}  %% fit big float above 2-col. text
+<!-- \renewcommand{\dblbottomfraction}{0.9} -->
+</pre>
+<p></p>
+<hr>
+
+<h2>Credits</h2>
+<pre>http://www.karinvandenberg.nl/node/22
+
+http://www-pord.ucsd.edu/~sgille/how_to/papers/
+
+http://www.gael-varoquaux.info/computers/garamond/index.html
+
+http://www.cl.cam.ac.uk/~rf10/pstex/latexcommands.htm
+
+http://www.andy-roberts.net/misc/latex/latextutorial6.html
+
+http://www.tug.org/svn/texlive/trunk/Master/texmf-dist/tex/latex/was/upgreek.sty?view=markup&amp;pathrev;=1449
+http://tug.ctan.org/macros/latex/contrib/was/upgreek.dtx
+
+</pre>
+
+
+
+
+</body></html>
+<!--
+     FILE ARCHIVED ON 14:44:00 Jun 16, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:55:36 Jan 13, 2020.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  load_resource: 465.935
+  PetaboxLoader3.datanode: 358.619 (4)
+  captures_list: 314.21
+  exclusion.robots.policy: 0.218
+  PetaboxLoader3.resolve: 268.924
+  LoadShardBlock: 165.16 (3)
+  CDXLines.iter: 16.305 (3)
+  esindex: 0.017
+  RedisCDXSource: 128.654
+  exclusion.robots: 0.234
+-->
