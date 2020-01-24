@@ -49,7 +49,7 @@ Python code (not my code) to <a href="https://gist.github.com/mirogula/de2e5cf53
   Step 1 is now to uncompress the Firefox .jsonlz4 file (compressed in a weird LZ4 format, for reasons known only to Mozilla) 
   to a normal json file.  One way to do this is via the firefox extension "mozlz4-edit" which will export to a suitable text format
   via "Save as JSON".  Another way is to use <a href="https://gist.github.com/kaefer3000/73febe1eec898cd50ce4de1af79a332a">mozlz4a.py</a>:
-  <pre> $ python3 mozlz4a-2.py -d recovery.jsonlz4 recovery_jsonlz4.txt</pre>
+  <pre> $ python mozlz4a.py -d recovery.jsonlz4 recovery_jsonlz4.txt</pre>
   <p>
     Step 2 is to convert the resulting text (JSON) file to human-readable HTML:
 <pre>$ python session2html.py -s recovery_json.txt -o recovery-pagelist.html
