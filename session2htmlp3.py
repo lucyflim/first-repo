@@ -65,6 +65,9 @@ if byt[:8] == b'mozLz40\0':
     print(byt[:8])
     sstxt = lz4.block.decompress(byt[8:])
     ss = json.loads(sstxt)
+else:
+    print('Not mozlz40')
+    ss = json.loads(args.sessionfile.read())
 
 mtimeInfo = "<p>File mtime {0}</p>".format(
       time.ctime(os.stat(args.sessionfile.name).st_mtime))
