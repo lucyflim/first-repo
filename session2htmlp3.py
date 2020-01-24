@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 
 ################################################################################
-# usage: session2html.py [-h] -s SESSION_FILE [-o OUTPUT_FILE]
+# usage: session2htmlp3.py [-h] -s SESSION_FILE [-o OUTPUT_FILE]
 # example: 
 # $ python3 session2html_editp3.py -s inouborecovery.jsonlz4 -o inouborecovery-out6.html
 #
