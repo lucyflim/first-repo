@@ -65,14 +65,17 @@ ADS-supplied BibTeX entry directly.
 </p><p>
 			<!-- <a href="http://web.archive.org/web/20100616150150/http://stuff.mit.edu/people/lucylim/pdf2doi_ads.txt"> -->
 			<a href="https://github.com/lucyflim/www/blob/master/getDOIfromPDF_newADS.applescript">
-			Updated applescript for the new ADS</a>
+			Updated applescript for the new ADS</a>d
+</p><p>		
+   There's also a script <a href="https://github.com/lucyflim/www/blob/master/dxdoiorg.applescript">to send the
+		DOI to dx.doi org instead</a>, if ADS doesn't suit your needs.
 </p>
-In order for it to work, you'll have to have pdftotext and curl installed
+In order for either of these to work, you'll have to have pdftotext and curl installed
 on your system.  I think curl comes with OS X; pdftotext can be installed
 from brew in the xpdf package:
 <pre>$ brew install xpdf</pre>
 in which case it'll probably be in /usr/local/bin/pdftotext,
-and probably some other packages as well.
+and it might be in some other packages as well.
 Depending on how it's been installed, you might have to change 
 "xpdf-pdftotext" in the applescript to
 "pdftotext" or whatever is the correct path.  If you don't
