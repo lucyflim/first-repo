@@ -1,4 +1,2 @@
-`�``{r, results ="asis"}
-fig_files <- dir(pattern = "txt$") 
-paste0("* ", fig_files, " ![]](", fig_files, ")\n")
-`�``
+Asteroid flux densities from Palomar / Spectrocam-10 as published in 
+<a href="https://ui.adsabs.harvard.edu/abs/2005Icar..173..385L/abstract">Lim et al. 2005</a>. The three columns are wavelength (in microns), flux density (W/m^2/micron, as in the paper), and uncertainty
