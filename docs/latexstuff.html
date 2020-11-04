@@ -63,11 +63,18 @@ You also have to run <a href="https://web.archive.org/web/20100616144400/http://
 </p>
 
 <h3> Adding a TTF (TrueType) font to TexShop/MacTeX:</h3>
-  <p>
+  <p> I started by reinstalling TeX Live Utility, then updating MacTeX. Doing one of these things installed the relevant font package from
+    <pre>http://ctan.math.washington.edu/tex-archive/systems/texlive/tlnet/</pre> although I'm not quite sure which. However,
+  TeXShop was still throwing out error messages and failing to render the font:
+  <pre>mktexpk: don't know how to create bitmap font for *fontname</pre> 
+      </p>
+          <p>
 The key was deleting the old pdftex.map file that was sitting in ~/Library somewhere, as described here:
     <pre>https://tex.stackexchange.com/questions/55881/local-font-installation-problems</pre>
-  </p>
-    
+After that and
+<pre>    $ sudo updmap -sys/pre>
+the new font worked fine.  </p>
+
 <h3> Some font stuff that is usually in my latex preambles:</h3>
 
 <pre>\usepackage[T1]{fontenc}
