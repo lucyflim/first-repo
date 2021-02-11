@@ -231,8 +231,9 @@ tell application "BibDesk"
 				set urlName to pasteItem
 				tell thePub
 					-- generate a new value for the field, we use the "Url" field as a dummy
-					if (urlName is not "") and (urlName is not in (get linked URLs)) then Â
+					if (urlName is not "") and (urlName is not in (get linked URLs)) then 
 						add urlName to end of linked URLs
+					end if
 				end tell
 				
 				-- set the value of "Journal" to "LPSC" because this is not done automatically
