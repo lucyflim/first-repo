@@ -38,6 +38,7 @@ tell application "BibDesk"
 				-- (type which pdftotext or which xpdf-pdftotext at a terminal prompt to get the path)
 				--set TheCommand to "/sw/bin/pdftotext -l 1 " & quoted form of theFirstFile & " - | " & theSedCommand
 				set TheCommand to "/usr/local/bin/pdftotext -f 2 " & quoted form of theFirstFile & " - | " & theSedCommand
+				set TheCommand to "/usr/local/bin/pdftotext -l 1 " & quoted form of theFirstFile & " - | " & theSedCommand
 				
 				--return TheCommand
 				do shell script TheCommand
