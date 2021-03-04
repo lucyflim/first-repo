@@ -1,0 +1,1115 @@
+0:00:01.520,0:00:04.400
+Hi all and welcome to my talk! Today
+
+0:00:03.120,0:00:06.240
+we're going to be looking for main belt
+
+0:00:04.400,0:00:07.520
+infrared spectral analogues for the
+
+0:00:06.240,0:00:09.440
+asteroid Bennu the target of the
+
+0:00:07.520,0:00:10.719
+OSIRIS-REx sample return mission.
+
+0:00:09.440,0:00:14.400
+We're going to be looking for them in
+
+0:00:10.719,0:00:15.599
+the catalog of the AKARI space telescope
+
+0:00:14.400,0:00:17.920
+I've been informed that unfortunately
+
+0:00:15.599,0:00:19.199
+the video upload site for the LPSC this
+
+0:00:17.920,0:00:20.080
+year does not support captions or
+
+0:00:19.199,0:00:22.000
+subtitles
+
+0:00:20.080,0:00:24.000
+so I'm planning as soon as I figure out
+
+0:00:22.000,0:00:26.480
+how to make a version of this talk with
+
+0:00:24.000,0:00:27.359
+captions subtitles or transcripts and to
+
+0:00:26.480,0:00:31.840
+place it at this
+
+0:00:27.359,0:00:33.200
+URL on this slide here
+
+0:00:31.840,0:00:35.040
+so it will be made available during the
+
+0:00:33.200,0:00:36.160
+meeting. I will probably take it down
+
+0:00:35.040,0:00:38.480
+shortly after the meeting and not leave
+
+0:00:36.160,0:00:39.520
+it up forever but hopefully this will
+
+0:00:38.480,0:00:42.840
+help you out
+
+0:00:39.520,0:00:44.559
+if you're looking for a transcript or
+
+0:00:42.840,0:00:47.680
+captions.
+
+0:00:44.559,0:00:49.840
+So gaussian fitting can be used in the
+
+0:00:47.680,0:00:51.360
+hydroxyl and H2O stretching region
+
+0:00:49.840,0:00:53.199
+to connect features of the infrared
+
+0:00:51.360,0:00:54.640
+spectrum to
+
+0:00:53.199,0:00:55.920
+the vibrations within the structure of
+
+0:00:54.640,0:00:57.280
+the mineral that are responsible for
+
+0:00:55.920,0:00:58.559
+those spectral features
+
+0:00:57.280,0:01:00.960
+So here's an example from the
+
+0:00:58.559,0:01:03.359
+literature this is Fialips et al. 2002.
+
+0:01:00.960,0:01:04.960
+They've taken a ferruginous mechtite
+
+0:01:03.359,0:01:06.159
+from the source clay repository of the
+
+0:01:04.960,0:01:07.600
+clay minerals society
+
+0:01:06.159,0:01:09.680
+and they've measured the spectrum and
+
+0:01:07.600,0:01:10.400
+decomposed it into a whole bunch of
+
+0:01:09.680,0:01:12.000
+Gaussians.
+
+0:01:10.400,0:01:13.600
+So there are five Gaussians here that
+
+0:01:12.000,0:01:17.200
+they have identified
+
+0:01:13.600,0:01:20.159
+as particular hydroxyl vibrations
+
+0:01:17.200,0:01:21.520
+here in Table 4 and
+
+0:01:20.159,0:01:23.119
+then there are two additional gaussians
+
+0:01:21.520,0:01:25.040
+one marked with an asterisk here
+
+0:01:23.119,0:01:26.240
+and another at even longer wavelengths - it's
+
+0:01:25.040,0:01:28.799
+kind of off of the
+
+0:01:26.240,0:01:30.079
+the plot here. And those are identified
+
+0:01:28.799,0:01:30.880
+not in table four but in the text of
+
+0:01:30.079,0:01:34.400
+this paper
+
+0:01:30.880,0:01:37.280
+as belonging to H2O stretching bands.
+
+0:01:34.400,0:01:38.240
+So you know this is something that
+
+0:01:37.280,0:01:40.799
+you can do in the lab under very
+
+0:01:38.240,0:01:42.399
+controlled conditions. Their sample
+
+0:01:40.799,0:01:45.200
+had exactly one mineral in it,
+
+0:01:42.399,0:01:46.720
+they had a very well understood
+
+0:01:45.200,0:01:49.520
+observing geometry,
+
+0:01:46.720,0:01:51.040
+and they were able they were able to
+
+0:01:49.520,0:01:52.720
+identify each of these bands
+
+0:01:51.040,0:01:54.799
+with a lot of confidence because of
+
+0:01:52.720,0:01:57.360
+those circumstances.
+
+0:01:54.799,0:01:59.759
+We can apply the gaussian technique to
+
+0:01:57.360,0:02:03.040
+astronomical spectra of asteroids.
+
+0:01:59.759,0:02:04.799
+We are probably not going to be able to
+
+0:02:03.040,0:02:06.799
+identify each band with as much
+
+0:02:04.799,0:02:08.640
+specificity and confidence
+
+0:02:06.799,0:02:10.720
+as you can in the lab because we'll be
+
+0:02:08.640,0:02:11.360
+looking at much less controlled
+
+0:02:10.720,0:02:13.680
+observing
+
+0:02:11.360,0:02:14.959
+conditions, a mixture of a whole bunch of
+
+0:02:13.680,0:02:17.440
+different minerals, and
+
+0:02:14.959,0:02:18.959
+probably some not so well crystallized
+
+0:02:17.440,0:02:21.599
+phases as well
+
+0:02:18.959,0:02:23.440
+but nevertheless it's a useful way to
+
+0:02:21.599,0:02:25.680
+describe the shape of the spectrum and
+
+0:02:23.440,0:02:26.640
+to say in general terms you know how
+
+0:02:25.680,0:02:29.440
+much of this
+
+0:02:26.640,0:02:31.440
+this band's area can be attributed to
+
+0:02:29.440,0:02:34.640
+for example the hydroxyl region
+
+0:02:31.440,0:02:34.959
+over here where the five numbered bands
+
+0:02:34.640,0:02:37.440
+are
+
+0:02:34.959,0:02:38.800
+versus the water region which falls as
+
+0:02:37.440,0:02:40.640
+many people have pointed out at slightly
+
+0:02:38.800,0:02:44.959
+longer wavelengths closer to
+
+0:02:40.640,0:02:46.319
+2.9 microns and beyond.
+
+0:02:44.959,0:02:48.160
+Another fun thing that you can do in the
+
+0:02:46.319,0:02:50.080
+lab with these samples
+
+0:02:48.160,0:02:51.280
+is that you can try to separate out
+
+0:02:50.080,0:02:52.720
+different gaussians that come from
+
+0:02:51.280,0:02:55.200
+different parts of the mineral structure
+
+0:02:52.720,0:02:56.080
+for example by deuterating your
+
+0:02:55.200,0:02:59.920
+samples
+
+0:02:56.080,0:03:01.440
+so in this paper, Kuligiewicz et al. 2015,
+
+0:02:59.920,0:03:04.080
+they took a whole bunch of clays from
+
+0:03:01.440,0:03:07.360
+again from the clay mineral society
+
+0:03:04.080,0:03:10.720
+and equilibrated them
+
+0:03:07.360,0:03:13.519
+with deuterated water and lo and behold
+
+0:03:10.720,0:03:14.480
+the spectrum separated right out so
+
+0:03:13.519,0:03:18.159
+here the blue trace
+
+0:03:14.480,0:03:20.720
+is the water - regular water H2O
+
+0:03:18.159,0:03:22.800
+equilibrated spectrum of this clay
+
+0:03:20.720,0:03:23.360
+mineral and the red trace here is when
+
+0:03:22.800,0:03:25.120
+you have
+
+0:03:23.360,0:03:27.680
+you know exposed it to a whole lot of
+
+0:03:25.120,0:03:30.239
+deuterium vapor you can see that the
+
+0:03:27.680,0:03:31.120
+ features that are adsorbed
+
+0:03:30.239,0:03:34.400
+water
+
+0:03:31.120,0:03:35.680
+or inter layer water slide right off
+
+0:03:34.400,0:03:37.599
+of their original position because those
+
+0:03:35.680,0:03:38.319
+are in equilibrium with the deuterated
+
+0:03:37.599,0:03:40.720
+water
+
+0:03:38.319,0:03:41.599
+whereas the structural hydroxyl feature
+
+0:03:40.720,0:03:43.680
+stays right
+
+0:03:41.599,0:03:45.120
+back in its original position and then
+
+0:03:43.680,0:03:47.040
+this is kind of a check on whether
+
+0:03:45.120,0:03:48.480
+you've correctly identified the sources
+
+0:03:47.040,0:03:50.080
+of your Gaussians
+
+0:03:48.480,0:03:51.200
+if you're doing gaussian fitting. These
+
+0:03:50.080,0:03:51.920
+authors actually didn't do Gaussian
+
+0:03:51.200,0:03:55.040
+fitting
+
+0:03:51.920,0:03:58.080
+so these are my fits to their data
+
+0:03:55.040,0:03:58.080
+but it works pretty well.
+
+0:03:58.560,0:04:01.200
+Gaussian fitting has also been applied
+
+0:04:00.000,0:04:03.519
+to asteroid and meteorite data for
+
+0:04:01.200,0:04:05.599
+example by Hiroi et al. on the left here
+
+0:04:03.519,0:04:07.200
+with the Hayabusa2 spectrum of
+
+0:04:05.599,0:04:10.319
+asteroid Ryugu
+
+0:04:07.200,0:04:15.360
+and by Kaplan et al. 2019 who apply this
+
+0:04:10.319,0:04:17.199
+method to a bunch of meteorite spectra.
+
+0:04:15.360,0:04:18.880
+So here's the Gaussian fit to the disc
+
+0:04:17.199,0:04:21.040
+integrated spectrum of Bennnu.
+
+0:04:18.880,0:04:22.960
+So this happens to be the approach
+
+0:04:21.040,0:04:25.040
+data from December 2018 that was
+
+0:04:22.960,0:04:28.320
+published in Hamilton et al. 2019.
+
+0:04:25.040,0:04:29.759
+um it's very similar to the bennu
+
+0:04:28.320,0:04:32.800
+average spectrum from the equatorial
+
+0:04:29.759,0:04:35.199
+survey data that Alice Praet
+
+0:04:32.800,0:04:36.639
+included in her recent manuscript which
+
+0:04:35.199,0:04:39.040
+has been submitted for publication now
+
+0:04:36.639,0:04:42.240
+so I would encourage you to check that out 
+
+0:04:39.040,0:04:46.240
+to learn more about the general features
+
+0:04:42.240,0:04:48.400
+of the spectrum of Bennu.
+
+0:04:46.240,0:04:50.240
+So where in the asteroid main belt are
+
+0:04:48.400,0:04:51.199
+there spectra similar to the spectrum of
+
+0:04:50.240,0:04:52.880
+Bennu?
+
+0:04:51.199,0:04:55.360
+And how widespread are those spectral
+
+0:04:52.880,0:04:56.720
+features? This is similar but not exactly
+
+0:04:55.360,0:04:59.040
+the same as the question
+
+0:04:56.720,0:05:00.240
+of where Bennu could have come from in
+
+0:04:59.040,0:05:02.240
+the asteroid main belt.
+
+0:05:00.240,0:05:03.840
+So today we're going to look at asteroid
+
+0:05:02.240,0:05:04.720
+spectra that were measured by the space
+
+0:05:03.840,0:05:06.560
+telescope
+
+0:05:04.720,0:05:09.120
+from JAXA the AKARI infrared
+
+0:05:06.560,0:05:11.600
+astronomical satellite
+
+0:05:09.120,0:05:12.800
+which measured spectra of 66 asteroids
+
+0:05:11.600,0:05:14.479
+several years ago now
+
+0:05:12.800,0:05:16.080
+in this spectral range and what is great
+
+0:05:14.479,0:05:17.600
+about it is that of course it is a space
+
+0:05:16.080,0:05:19.039
+telescope it's above the atmosphere and
+
+0:05:17.600,0:05:23.039
+so we can see that critical
+
+0:05:19.039,0:05:26.560
+2.7 to 2.85 micron region that is so
+
+0:05:23.039,0:05:26.560
+opaque in the earth's atmosphere.
+
+0:05:26.800,0:05:30.320
+So the strengths and limitations of the
+
+0:05:28.800,0:05:32.960
+AKARI dataset can be
+
+0:05:30.320,0:05:34.080
+kind of estimated by looking at an
+
+0:05:32.960,0:05:35.600
+example where we have
+
+0:05:34.080,0:05:37.600
+ground and space-based data that's
+
+0:05:35.600,0:05:39.280
+independent of AKARI and comparing those
+
+0:05:37.600,0:05:42.000
+to the AKARI spectrum.
+
+0:05:39.280,0:05:43.199
+So here are three spectra of the largest
+
+0:05:42.000,0:05:45.759
+asteroid 1 Ceres
+
+0:05:43.199,0:05:47.680
+and the one from AKARI up here in blue
+
+0:05:45.759,0:05:50.960
+and the IRTF ground-based spectrum
+
+0:05:47.680,0:05:54.240
+and then finally the Dawn VIR spectrum
+
+0:05:50.960,0:05:57.280
+from the Dawn orbiter so
+
+0:05:54.240,0:05:59.840
+you can see that the
+
+0:05:57.280,0:06:02.160
+akari data matches the other data pretty
+
+0:05:59.840,0:06:04.319
+well in spectral slope and the locations
+
+0:06:02.160,0:06:07.440
+of maximum minima and this region from
+
+0:06:04.319,0:06:11.919
+you know just a little bit longer of 2.7
+
+0:06:07.440,0:06:13.360
+to about you know 3.3 microns or so
+
+0:06:11.919,0:06:15.520
+once you get longward of that then the
+
+0:06:13.360,0:06:16.160
+spectra start to diverge a bit and then
+
+0:06:15.520,0:06:18.800
+also
+
+0:06:16.160,0:06:21.360
+shortward of 2.7 there is a significant
+
+0:06:18.800,0:06:24.080
+difference in the spectral slope here
+
+0:06:21.360,0:06:25.840
+so you can see where in which spectral
+
+0:06:24.080,0:06:29.600
+region the AKARI data are likely to
+
+0:06:25.840,0:06:29.600
+be most reliable.
+
+0:06:30.000,0:06:33.120
+So the AKARI catalog has 60 something
+
+0:06:31.840,0:06:35.440
+asteroids in it
+
+0:06:33.120,0:06:37.039
+and they are not everywhere in the main
+
+0:06:35.440,0:06:38.160
+belt. They cover a lot of places in
+
+0:06:37.039,0:06:42.160
+the main belt
+
+0:06:38.160,0:06:44.560
+but not all of the places.
+
+0:06:42.160,0:06:45.280
+In particular we are missing AKARI
+
+0:06:44.560,0:06:47.440
+data
+
+0:06:45.280,0:06:48.479
+from a population of asteroids the low
+
+0:06:47.440,0:06:50.720
+albedo,
+
+0:06:48.479,0:06:51.680
+low inclination inner main belt region
+
+0:06:50.720,0:06:54.639
+of the
+
+0:06:51.680,0:06:56.000
+the main belt which 
+
+0:06:54.639,0:06:58.720
+includes the asteroid families
+
+0:06:56.000,0:07:00.000
+that we think on dynamical grounds are
+
+0:06:58.720,0:07:00.880
+most likely to actually include the
+
+0:07:00.000,0:07:03.919
+parent body
+
+0:07:00.880,0:07:05.919
+of Bennu. So the only low albedo
+
+0:07:03.919,0:07:08.800
+inner main-belt asteroid that's in here at all
+
+0:07:05.919,0:07:10.240
+is 51 Nemausa, marked by a red square in
+
+0:07:08.800,0:07:12.240
+the inner main belt here
+
+0:07:10.240,0:07:13.599
+and we'll come back to that later in
+
+0:07:12.240,0:07:16.000
+the presentation.
+
+0:07:13.599,0:07:17.039
+The middle and outer main belt are a
+
+0:07:16.000,0:07:20.880
+little bit more
+
+0:07:17.039,0:07:24.160
+well represented here so for future
+
+0:07:20.880,0:07:27.840
+telescope proposals
+
+0:07:24.160,0:07:30.000
+the low inclination low albedo
+
+0:07:27.840,0:07:32.639
+inner main belt population are a great
+
+0:07:30.000,0:07:32.639
+set of targets
+
+0:07:33.680,0:07:37.680
+Okay so before the Gaussian fitting we
+
+0:07:35.599,0:07:38.720
+can also try kind of just the brute
+
+0:07:37.680,0:07:40.720
+force approach
+
+0:07:38.720,0:07:42.800
+So here are the direct comparisons
+
+0:07:40.720,0:07:43.199
+with of the Bennu spectrum with spectra
+
+0:07:42.800,0:07:45.280
+of
+
+0:07:43.199,0:07:46.720
+the three B-type asteroids that were
+
+0:07:45.280,0:07:48.560
+measured by AKARI could be because
+
+0:07:46.720,0:07:50.319
+Bennu's visible/near-infrared
+
+0:07:48.560,0:07:52.000
+type is type B, which is part of
+
+0:07:50.319,0:07:54.800
+the C complex of asteroids.
+
+0:07:52.000,0:07:56.800
+So out of these three: Pallas,
+
+0:07:54.800,0:08:00.080
+Interamnia and Themis,
+
+0:07:56.800,0:08:03.280
+Pallas is kind of a clear winner here. And
+
+0:08:00.080,0:08:04.319
+we've let the spectral contrast float 
+
+0:08:03.280,0:08:06.240
+and then just use
+
+0:08:04.319,0:08:08.960
+a least squares approach to determine
+
+0:08:06.240,0:08:08.960
+the best fit there.
+
+0:08:10.080,0:08:14.319
+Where is the fit noticeably better
+
+0:08:13.360,0:08:16.960
+in Pallas
+
+0:08:14.319,0:08:19.360
+than in Interamnia and that is
+
+0:08:16.960,0:08:21.280
+exactly at 2.9 microns
+
+0:08:19.360,0:08:24.240
+so which is you know where we expect
+
+0:08:21.280,0:08:24.240
+that water band to be.
+
+0:08:25.280,0:08:29.120
+We can do the same thing with Gaussian
+
+0:08:26.720,0:08:30.479
+fitting so the spectra of Pallas
+
+0:08:29.120,0:08:32.159
+here in the Gaussian fits the spectrum of
+
+0:08:30.479,0:08:34.240
+Pallas and Interamnia
+
+0:08:32.159,0:08:36.399
+there is a gaussian centered
+
+0:08:34.240,0:08:39.680
+quite close to 2.9 microns
+
+0:08:36.399,0:08:41.120
+in both spectra and it's quite a lot
+
+0:08:39.680,0:08:42.959
+you know larger in the spectrum of
+
+0:08:41.120,0:08:43.680
+Pallas than in the spectrum of
+
+0:08:42.959,0:08:45.519
+Interamnia.
+
+0:08:43.680,0:08:46.880
+So it's mostly the size of this
+
+0:08:45.519,0:08:48.560
+gaussian that's responsible
+
+0:08:46.880,0:08:52.080
+for the better fit of Pallas compared to
+
+0:08:48.560,0:08:54.320
+Interamnia to Bennu
+
+0:08:52.080,0:08:56.959
+Here is Pallas versus the outer main
+
+0:08:54.320,0:09:00.160
+belt B-type asteroid 24 Themis
+
+0:08:56.959,0:09:02.800
+and yes you can see the Themis has a
+
+0:09:00.160,0:09:04.560
+very low Gaussian amplitude in the
+
+0:09:02.800,0:09:06.959
+2.9 micron region
+
+0:09:04.560,0:09:08.000
+and a much higher amplitude close to
+
+0:09:06.959,0:09:10.240
+3.1 microns
+
+0:09:08.000,0:09:11.040
+that doesn't have a comparably deep
+
+0:09:10.240,0:09:13.920
+feature in
+
+0:09:11.040,0:09:13.920
+Pallas or Bennu.
+
+0:09:14.560,0:09:18.640
+Gaussian fitting can also be applied to
+
+0:09:16.320,0:09:21.680
+the spectra of hydrated meteorites.
+
+0:09:18.640,0:09:24.720
+So these spectra from
+
+0:09:21.680,0:09:26.160
+the publication by Takir et al. 2013 - 
+
+0:09:24.720,0:09:28.880
+these are all
+
+0:09:26.160,0:09:31.120
+CM chondrites and they also look kind
+
+0:09:28.880,0:09:34.240
+of similar to Pallas and Bennu
+
+0:09:31.120,0:09:34.720
+having their gaussian at 2.9 microns
+
+0:09:34.240,0:09:37.519
+that
+
+0:09:34.720,0:09:38.160
+is responsible for about 30 to 40
+
+0:09:37.519,0:09:41.519
+percent
+
+0:09:38.160,0:09:43.040
+ish of the the total band area.
+
+0:09:41.519,0:09:44.959
+Another interesting asteroid to compare
+
+0:09:43.040,0:09:48.399
+to bennu is 51 Nemausa because
+
+0:09:44.959,0:09:48.399
+it is the only low albedo
+
+0:09:48.880,0:09:52.480
+inner main belt asteroid that was
+
+0:09:50.160,0:09:55.279
+observed by AKARI
+
+0:09:52.480,0:09:56.800
+and even though the inclination of
+
+0:09:55.279,0:09:57.600
+Nemausa is much higher than the
+
+0:09:56.800,0:09:59.440
+inclination
+
+0:09:57.600,0:10:01.360
+of where we think Bennu's actual source
+
+0:09:59.440,0:10:02.480
+region is, it's still an interesting
+
+0:10:01.360,0:10:04.800
+comparison. So
+
+0:10:02.480,0:10:05.600
+Nemausa kind of has the opposite problem
+
+0:10:04.800,0:10:07.680
+um
+
+0:10:05.600,0:10:09.360
+as Interamnia compared when when
+
+0:10:07.680,0:10:12.880
+comparing the spectrum to Bennu
+
+0:10:09.360,0:10:14.720
+in that the 2.9 ish micron gaussian
+
+0:10:12.880,0:10:19.040
+is actually too large
+
+0:10:14.720,0:10:21.040
+compared to the case of Bennu.
+
+0:10:19.040,0:10:22.240
+Another general category of asteroids
+
+0:10:21.040,0:10:23.519
+that one might
+
+0:10:22.240,0:10:25.040
+be interested in comparing to Bennu are
+
+0:10:23.519,0:10:25.680
+those that have the same band minimum as
+
+0:10:25.040,0:10:28.640
+Bennu - 
+
+0:10:25.680,0:10:30.160
+namely 2.74 microns. As you can see
+
+0:10:28.640,0:10:31.920
+these represent the
+
+0:10:30.160,0:10:33.279
+middle and outer main belt kind of
+
+0:10:31.920,0:10:36.079
+moderate inclination.
+
+0:10:33.279,0:10:36.880
+So two of them are certainly
+
+0:10:36.079,0:10:40.160
+better
+
+0:10:36.880,0:10:42.000
+fits to Bennu compared to Aurora or
+
+0:10:40.160,0:10:43.279
+52 Europa there
+
+0:10:42.000,0:10:47.279
+but neither one of them is quite as good
+
+0:10:43.279,0:10:49.200
+as 2 Pallas for example.
+
+0:10:47.279,0:10:50.560
+and that again here Nemesis has kind of
+
+0:10:49.200,0:10:52.320
+the same misfit
+
+0:10:50.560,0:10:55.519
+that Interamnia did with not quite
+
+0:10:52.320,0:10:57.040
+enough band depth there at 2.9 microns
+
+0:10:55.519,0:10:59.200
+which is borne out in the Gaussians as
+
+0:10:57.040,0:10:59.200
+well.
+
+0:10:59.519,0:11:03.040
+Two kind of unexpected but close band
+
+0:11:02.240,0:11:06.800
+matches are
+
+0:11:03.040,0:11:08.320
+49 Pales and 476 Hedwig 
+
+0:11:06.800,0:11:10.160
+which one of them is a middle main belt
+
+0:11:08.320,0:11:12.959
+asteroid and one of them
+
+0:11:10.160,0:11:14.399
+being an outer main belt asteroid both
+
+0:11:12.959,0:11:16.160
+of them have slightly
+
+0:11:14.399,0:11:18.480
+longer wavelength band centers in the
+
+0:11:16.160,0:11:20.000
+AKARI data compared to Bennu but
+
+0:11:18.480,0:11:21.519
+you know with a plus or 
+
+0:11:20.000,0:11:23.600
+minus 0.01 microns
+
+0:11:21.519,0:11:25.040
+they're kind of within the error bars
+
+0:11:23.600,0:11:27.839
+and they do have a pretty similar
+
+0:11:25.040,0:11:28.079
+spectral slope in both cases from 
+
+0:11:27.839,0:11:31.920
+
+
+0:11:28.079,0:11:31.920
+2.75 microns out
+
+0:11:32.640,0:11:36.640
+and you can see that in the gaussian
+
+0:11:33.920,0:11:36.640
+fitting as well.
+
+0:11:38.480,0:11:42.560
+So in conclusion the AKARI spectral
+
+0:11:41.680,0:11:46.560
+shape
+
+0:11:42.560,0:11:48.640
+matches to Bennu include
+
+0:11:46.560,0:11:50.320
+2 Pallas which is a B-type asteroid 
+
+0:11:48.640,0:11:53.200
+which is a little bit surprising given
+
+0:11:50.320,0:11:54.000
+how far it is dynamically from
+
+0:11:53.200,0:11:56.000
+the
+
+0:11:54.000,0:11:58.079
+low inclination inner main belt
+
+0:11:56.000,0:11:58.800
+which you know is the dynamically the
+
+0:11:58.079,0:12:01.839
+most likely to
+
+0:11:58.800,0:12:05.200
+deliver asteroids into Bennu-like orbits.
+
+0:12:01.839,0:12:08.800
+Possible matches also include 
+
+0:12:05.200,0:12:10.720
+476 Hedwig and 49 Pales - not quite
+
+0:12:08.800,0:12:12.160
+as close as a match as Pallas but
+
+0:12:10.720,0:12:13.920
+you know within the error bars if
+
+0:12:12.160,0:12:17.440
+they're not too far out.
+
+0:12:13.920,0:12:19.600
+And
+
+0:12:17.440,0:12:20.560
+in general this kind of suggests that
+
+0:12:19.600,0:12:22.560
+Bennu-like
+
+0:12:20.560,0:12:23.600
+material or material that at least produces
+
+0:12:22.560,0:12:26.480
+Bennu-like
+
+0:12:23.600,0:12:27.200
+spectra in the 2.7 to 3.2 micron region
+
+0:12:26.480,0:12:29.120
+
+0:12:27.200,0:12:30.959
+has been spread kind of far and wide
+
+0:12:29.120,0:12:31.680
+throughout the main belt and is not only
+
+0:12:30.959,0:12:35.920
+located
+
+0:12:31.680,0:12:38.079
+in the possible Bennu source region.
+
+0:12:35.920,0:12:39.120
+Once again it would be really
+
+0:12:38.079,0:12:41.120
+great to get
+
+0:12:39.120,0:12:42.959
+spectra that cover this spectral region
+
+0:12:41.120,0:12:43.600
+from where we think Bennu actually came
+
+0:12:42.959,0:12:46.800
+from,
+
+0:12:43.600,0:12:48.240
+which is not part of the AKARI data
+
+0:12:46.800,0:12:53.040
+set right now.
+
+0:12:48.240,0:12:55.120
+Thank you very much for your time!
+
+0:12:53.040,0:12:55.120
+
+
